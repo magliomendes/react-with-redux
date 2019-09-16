@@ -1,0 +1,51 @@
+.menuClosed {
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    top: -50%;
+  }
+}
+
+.menuOpened {
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    top: 0%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+  }
+}
+
+.toggleUp {
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: -5rem;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 98.3%);
+    border: 0.1rem solid #fff;
+    &:hover {
+      width: 100vw;
+      border-radius: 20%;
+      background-color: #a99e7e;
+    }
+  }
+}
+
+.toggleDown {
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    display: block;
+    top: 36%;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
