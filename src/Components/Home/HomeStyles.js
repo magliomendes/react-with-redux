@@ -1,5 +1,6 @@
 
 import styled from "styled-components";
+import { Opacity } from "../../Shared/Keyframes/Keyframes"
 
 export const HomeContent = styled.div`
   background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 98.3%);
@@ -12,6 +13,7 @@ export const HomeContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: ${Opacity} .3s 1;
 `;
 
 export const Playlist = styled.div`

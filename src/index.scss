@@ -18,4 +18,10 @@ html {
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: 0;
+  &:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+  }
 }

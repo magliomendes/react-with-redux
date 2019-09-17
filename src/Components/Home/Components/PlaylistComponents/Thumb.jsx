@@ -47,6 +47,7 @@ export class Thumb extends React.Component {
 }
 
 export const VideoThumbnail = styled.div`
+  cursor: pointer;
   height: 22.2rem;
   width: 37.5rem;
   border: 0.1rem solid #a99e7e;
@@ -58,10 +59,14 @@ export const VideoThumbnail = styled.div`
   position: relative;
   padding: 0;
   margin: 4rem auto 0 auto;
+  transition: .2s;
   &:first-child {
     @media screen and (max-width: 768px) {
       margin-top: 6rem;
     }
+  }
+  &:hover {
+    transform: scale(1.05);
   }
   p {
     position: absolute;

@@ -91,6 +91,7 @@ export const InputContent = styled.div`
         transition: 0.3s;
         z-index: -1;
         letter-spacing: 0.5px;
+        font-size: 1.3rem;
       }
     }
 `;

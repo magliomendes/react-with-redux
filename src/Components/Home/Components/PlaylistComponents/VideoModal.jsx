@@ -6,7 +6,6 @@ import styled from "styled-components";
 const VideoModal = props => {
   return (
     <>
-      <CloseOption onClick={props.onHide}>CLOSE</CloseOption>
       <Modal
         {...props}
         aria-labelledby="contained-modal-title-vcenter"
@@ -22,6 +21,8 @@ const VideoModal = props => {
           />
         </Modal.Body>
       </Modal>
+      <CloseOption onClick={props.onHide}>CLOSE</CloseOption>
+
     </>
   );
 };
