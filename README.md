@@ -9,3 +9,5 @@
 ### Login `eve.holt@reqres.in`
 ### Password `cityslicka`
 Provided by https://reqres.in/ as a Rest API
+
+Developed by https://magliomendes.com 
