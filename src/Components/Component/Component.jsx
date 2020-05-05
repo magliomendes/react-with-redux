@@ -61,9 +61,9 @@ export default class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        {!this.state.alreadyLoaded && <LoadingScreen />}
         <Router history={history}>
           <Content>
+            {!this.state.alreadyLoaded && <LoadingScreen />}
             <BackgroundSection>
               <Switch>
                 <Provider store={youTubestore}>
@@ -77,7 +77,7 @@ export default class App extends React.Component {
               <Provider store={accountstore}>
                 <Route exact path="/react-with-redux/login" component={Login} />
               </Provider>
-              <Redirect to="/react-with-redux" />
+              <Redirect to="/react-with-redux/login" />
             </BackgroundSection>
           </Content>
         </Router>
