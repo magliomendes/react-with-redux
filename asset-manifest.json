@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-with-redux/static/css/main.0b1f01e5.chunk.css",
+    "main.js": "/react-with-redux/static/js/main.454a2231.chunk.js",
+    "main.js.map": "/react-with-redux/static/js/main.454a2231.chunk.js.map",
+    "runtime~main.js": "/react-with-redux/static/js/runtime~main.b1d4797e.js",
+    "runtime~main.js.map": "/react-with-redux/static/js/runtime~main.b1d4797e.js.map",
+    "static/css/2.266e55a5.chunk.css": "/react-with-redux/static/css/2.266e55a5.chunk.css",
+    "static/js/2.e8d37ea5.chunk.js": "/react-with-redux/static/js/2.e8d37ea5.chunk.js",
+    "static/js/2.e8d37ea5.chunk.js.map": "/react-with-redux/static/js/2.e8d37ea5.chunk.js.map",
+    "index.html": "/react-with-redux/index.html",
+    "precache-manifest.9dfb71f2406151079a1cec9e35e4884d.js": "/react-with-redux/precache-manifest.9dfb71f2406151079a1cec9e35e4884d.js",
+    "service-worker.js": "/react-with-redux/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/react-with-redux/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.0b1f01e5.chunk.css.map": "/react-with-redux/static/css/main.0b1f01e5.chunk.css.map",
+    "static/media/loader.ef11bd6c.svg": "/react-with-redux/static/media/loader.ef11bd6c.svg"
+  }
+}
