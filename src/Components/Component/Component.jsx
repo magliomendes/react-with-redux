@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Router, Route } from "react-router-dom";
+import { BrowserRouter, Router, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import { Content } from "./Content";
@@ -15,8 +15,8 @@ import youtubeReducer from "../../Reducers/Youtube.reducer";
 import accountReducer from "../../Reducers/User.reducer";
 import { createStore, applyMiddleware } from "redux";
 import styled from "styled-components";
-import { background } from "../../Helpers/Image-Routes.helper";
 import { LoadingScreen } from "../LoadingScreen/LoadingScreen";
+const background = require("./background.png");
 
 export const youTubestore = createStore(
   youtubeReducer,
@@ -53,20 +53,24 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Router history={history}>
-        <Content>
-          {!this.state.alreadyLoaded && <LoadingScreen />}
-          <BackgroundSection>
-            <Provider store={youTubestore}>
-              <PrivateRoute exact path="/" component={HomeComponent} />
-            </Provider>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <div>
+          <Router history={history}>
+            <Content>
+              {!this.state.alreadyLoaded && <LoadingScreen />}
+              <BackgroundSection>
+                <Provider store={youTubestore}>
+                  <PrivateRoute exact path="/" component={HomeComponent} /> :
+                </Provider>
 
-            <Provider store={accountstore}>
-              <Route path="/login" component={Login} />
-            </Provider>
-          </BackgroundSection>
-        </Content>
-      </Router>
+                <Provider store={accountstore}>
+                  <Route path="/login" component={Login} />
+                </Provider>
+              </BackgroundSection>
+            </Content>
+          </Router>
+        </div>
+      </BrowserRouter>
     );
   }
 }

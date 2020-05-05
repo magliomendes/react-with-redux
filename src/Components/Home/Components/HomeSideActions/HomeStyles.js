@@ -1,5 +1,6 @@
-import { logo_dark } from "../../../../Helpers/Image-Routes.helper";
 import styled from "styled-components";
+
+const logo_dark = require("./logo_dark.png");
 
 export const Logo = styled.div`
   background-image: url(${logo_dark});
