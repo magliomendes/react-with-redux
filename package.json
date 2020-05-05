@@ -2,7 +2,7 @@
   "name": "react_redux_ts",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://magliomendes.github.io/react-with-redux",
+  "homepage": "https://magliomendes.github.io/react-with-redux/",
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.5",

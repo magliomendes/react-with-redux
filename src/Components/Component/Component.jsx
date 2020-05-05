@@ -1,5 +1,11 @@
 import * as React from "react";
-import { BrowserRouter, Router, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 import { Provider } from "react-redux";
 
 import { Content } from "./Content";
@@ -16,6 +22,7 @@ import accountReducer from "../../Reducers/User.reducer";
 import { createStore, applyMiddleware } from "redux";
 import styled from "styled-components";
 import { LoadingScreen } from "../LoadingScreen/LoadingScreen";
+
 const background = require("./background.png");
 
 export const youTubestore = createStore(
@@ -53,23 +60,27 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <div>
-          <Router history={history}>
-            <Content>
-              {!this.state.alreadyLoaded && <LoadingScreen />}
-              <BackgroundSection>
+      <BrowserRouter>
+        {!this.state.alreadyLoaded && <LoadingScreen />}
+        <Router history={history}>
+          <Content>
+            <BackgroundSection>
+              <Switch>
                 <Provider store={youTubestore}>
-                  <PrivateRoute exact path="/" component={HomeComponent} /> :
+                  <PrivateRoute
+                    exact
+                    path="/react-with-redux/home"
+                    component={HomeComponent}
+                  />
                 </Provider>
-
-                <Provider store={accountstore}>
-                  <Route path="/login" component={Login} />
-                </Provider>
-              </BackgroundSection>
-            </Content>
-          </Router>
-        </div>
+              </Switch>
+              <Provider store={accountstore}>
+                <Route exact path="/react-with-redux/login" component={Login} />
+              </Provider>
+              <Redirect to="/react-with-redux" />
+            </BackgroundSection>
+          </Content>
+        </Router>
       </BrowserRouter>
     );
   }
